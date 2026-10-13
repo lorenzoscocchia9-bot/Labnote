@@ -415,7 +415,7 @@ function authModal(){
       <div class="bar"><button class="${mode==='in'?'pri':''}" id="tabIn">Accedi</button><button class="${mode==='up'?'pri':''}" id="tabUp">Crea account</button></div>
       <label>Email<input id="ae" type="email" autocomplete="email"></label>
       <label>Password<input id="ap" type="password" autocomplete="current-password"></label>
-      ${mode==='up'?'<label>Nome del gruppo / Lab<input id="alab" type="text" maxlength="80" placeholder="Es. Ceppi Lab"></label>':''}
+      ${mode==='up'?'<label>Nome del gruppo / Lab<input id="alab" type="text" maxlength="80" placeholder="Es. My Lab"></label>':''}
       <div class="authmsg" id="am">${esc(cloudError)}</div>
       <button class="pri" id="asubmit">${mode==='in'?'Accedi':'Crea account'}</button>
     </div>`;
