@@ -210,7 +210,12 @@ body.auth-locked > :not(#authov){visibility:hidden!important} body.auth-locked{o
 .counter-toolbar{display:flex;justify-content:flex-end;margin:1rem 0}.counter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}.counter-card{position:relative;background:#e8eef7;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:1rem;border-radius:5px}.counter-delete{position:absolute;right:.55rem;top:.5rem;width:2rem;height:2rem;border:2px solid var(--ink);background:#b91c1c;color:#fff;font-size:1.4rem;font-weight:900;line-height:1;cursor:pointer}.counter-delete:hover{filter:brightness(1.15)}.counter-card label{padding-right:2.2rem}.counter-card label{display:block;font-weight:800}.counter-name{width:100%;box-sizing:border-box;margin:.4rem 0 .8rem;border:2px solid var(--ink);padding:.6rem;background:#fff;color:var(--ink);font:inherit}.counter-hit{width:100%;min-height:150px;border:3px solid var(--ink);background:#0d3768;color:#fff;box-shadow:4px 4px 0 var(--ink);font-size:2.2rem;font-weight:900;cursor:pointer;display:grid;place-content:center;gap:.35rem;transition:transform .12s,filter .12s}.counter-hit small{font-size:.75rem;letter-spacing:.08em}.counter-hit:hover{filter:brightness(1.18)}.counter-pop{animation:counterPop .32s ease-out}@keyframes counterPop{0%{transform:scale(1)}35%{transform:scale(1.11);background:#08725f}70%{transform:scale(.97)}100%{transform:scale(1)}}.counter-reset{width:100%;margin-top:.8rem}
 
 @media(max-width:600px){.tiles{grid-template-columns:repeat(6,minmax(160px,1fr))}.calc-workspace{grid-template-columns:1fr}.calc-workspace .calcform,.calc-workspace .bar,.calc-workspace .calcresult{grid-column:1;grid-row:auto}}
-</style></head>
+</style><link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#f2eefc">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
 <body class="auth-locked">
 <header>
 <button class="brand" data-go="home" aria-label="Home"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="20" cy="20" rx="17" ry="12"/><path d="M11 9v9q0 3 3 3t3-3V9M23 31V22q0-3 3-3t3 3v9" stroke="var(--ac2)"/></svg><span>Lab Note<small id="labNameTop">My Lab</small></span></button>
@@ -869,5 +874,6 @@ for(const k of['acts','plans','inc','ct','smp','stk'])(d[k]||[]).forEach(x=>{if(
 r.readAsText(f);e.target.value=''});
 const hv=()=>{try{const v=location.hash.slice(1);if(VW[v]&&v!=='search'&&v!==V){V=v;E=null;render()}}catch(e){}};addEventListener('hashchange',hv);renderLanguagePicker();hv();render();authUI();initCloud();
 </script>
+<script>if ("serviceWorker" in navigator) { window.addEventListener("load", function () { navigator.serviceWorker.register("/service-worker.js").catch(function (error) { console.warn("Service worker registration failed:", error); }); }); }</script>
 </body></html>
 
