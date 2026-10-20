@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.labnote",
+        "sha256_cert_fingerprints": ["4E:BC:D2:9D:F1:14:B0:57:FE:09:58:29:10:67:A8:6E:90:3C:87:4B:B9:4D:50:A6:3B:0A:9D:05:B1:00:85:CE"]
+      }
+    }]
